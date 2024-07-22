@@ -1,7 +1,7 @@
 import { $ } from 'bun';
 import http from 'http';
 
-const port = 3000;
+const port = 1024;
 
 async function scrape() {
 	const data = await $`pwrstat -status`.text();
