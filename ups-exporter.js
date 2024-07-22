@@ -26,6 +26,7 @@ async function scrape() {
 		battery_time: map["Remaining Runtime"],
 		rated_voltage: Number(/\d+/g.exec(map["Rating Voltage"])[0]),
 		rated_wattage: Number(/\d+/g.exec(map["Rating Power"])[0]),
+		input_state: map["State"] == 'Normal' ? 1 : 0,
 		input_voltage: Number(/\d+/g.exec(map["Utility Voltage"])[0]),
 		output_voltage: Number(/\d+/g.exec(map["Output Voltage"])[0]),
 		load_wattage: Number(/\d+/g.exec(map["Load"])[0]),
