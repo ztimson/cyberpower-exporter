@@ -13,17 +13,17 @@ fi
 
 # Setup exporter
 echo "Installing Exporter..."
-cp power-exporter.js /usr/local/bin/power-exporter.js
-chmod +x /usr/local/bin/power-exporter.js
+cp ups-exporter.js /usr/local/bin/ups-exporter.js
+chmod +x /usr/local/bin/ups-exporter.js
 
 # Setup service
 echo "Stting Up Service..."
-cp power-exporter.service /etc/systemd/system/power-exporter.service
-chmod +x /etc/systemd/system/power-exporter.service
-systemctl enable power-exporter
-systemctl restart power-exporter
+cp ups-exporter.service /etc/systemd/system/ups-exporter.service
+chmod +x /etc/systemd/system/ups-exporter.service
+systemctl enable ups-exporter
+systemctl restart ups-exporter
 
 echo "Done!"
 sleep 1
 echo ""
-journalctl -u power-exporter -n 1
+journalctl -u ups-exporter -n 1

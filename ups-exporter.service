@@ -3,7 +3,7 @@ Description=Export UPS metrics to webpage for scraping
 After=network.target
 
 [Service]
-ExecStart=/root/.bun/bin/bun /usr/local/bin/power-exporter.js
+ExecStart=/root/.bun/bin/bun /usr/local/bin/ups-exporter.js
 Restart=always
 
 [Install]
