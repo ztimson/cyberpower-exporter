@@ -7,10 +7,10 @@ Export UPS data via HTTP for prometheus service
 ### Prerequisites
 
 - [Bun](https://bun.sh)
+- [PowerPanel](https://www.cyberpower.com/global/en/product/sku/powerpanel_for_linux#downloads)
 
 ### Instructions
 
-1. Download the [PowerPanel](https://cyberpower.com/global/en/product/sku/powerpanel_for_linux#downloads)
-2. Install the package: `sudo dpkg -i powerpanel.deb`
-3. Install the service: 
-4. Start service automatically: `sudo systemctl enable power-exporter && sudo systemctl start power-exporter`
+1. Clone the repository
+2. Run the install script: `./install.sh`
+3. Setup Prometheus to scrape http://localhost:1024
